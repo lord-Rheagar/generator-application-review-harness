@@ -110,11 +110,12 @@ The report proposes changes to the **execution** score. Your team makes the fina
 
 ## How it works
 
-1. **Select cases.** `prepare` joins applications to first-pass scores and selects the band just below the cutoff. With a cutoff of 70 and a band of 5, that means 65 up to but below 70.
-2. **Review the answers.** Claude receives the two execution answers and the rubric anchors for each case in the band. The packet withholds the first-pass scores. The reviewer proposes an execution score, cites an exact excerpt, and gives a reason.
-3. **Check the evidence and recalculate.** `audit` checks that the excerpt exists in the named answer. It uses the rubric weights to recompute the total and flags cases that cross the cutoff. A missing, fabricated, or misattributed excerpt goes to human review.
+1. **Calculate the first-pass total.** Your existing review process supplies four scores from 0 to 5. The harness joins them to the application by ID. For each criterion, it divides the score by 5, multiplies by the criterion's weight, and adds the results to get a total out of 100.
+2. **Choose what to recheck.** `prepare` selects cases just below the cutoff. With a cutoff of 70 and a review band of 5, scores from 65 to just under 70 qualify. The review packet includes the two execution answers and the rubric's descriptions of each score. It withholds the earlier scores.
+3. **Propose a new execution score.** Claude or a human reviewer matches the work described in those answers to the rubric. They return a score from 0 to 5, the source field, an exact excerpt, and a short explanation.
+4. **Verify and recalculate.** `audit` checks the score and finds the exact excerpt in the named answer. If the checks pass, it substitutes the proposed execution score, keeps the other three scores, and recalculates the total. A total at or above the cutoff gets a work-test review flag. Missing or invalid evidence goes to human review without a proposed total.
 
-The second pass rechecks **execution** and carries the other criterion scores through. Quote verification confirms what the applicant wrote. Human reviewers judge the underlying claims and make decisions.
+The code checks what the applicant wrote and does the arithmetic. The reviewer judges what the excerpt supports and decides whether the applicant advances. See [the full walkthrough](docs/how-it-works.md) for the scoring calculation, the reviewer packet and response formats, and the exact rules for each outcome.
 
 ## Find your way around
 
@@ -124,6 +125,7 @@ The second pass rechecks **execution** and carries the other criterion scores th
 | [`examples/`](examples/) | Two fictional batches, a sample rubric, and recorded review findings. |
 | [`.claude/skills/review-applications/`](.claude/skills/review-applications/) | Instructions that connect Claude to the same Python harness. |
 | [`docs/inputs.md`](docs/inputs.md) | CSV and JSON formats, column mapping, and commands for a custom batch. |
+| [`docs/how-it-works.md`](docs/how-it-works.md) | How the harness selects cases, checks evidence, calculates scores, and reports results. |
 | [`tests/`](tests/) | Checks for the replays, input handling, and the standalone ZIP. |
 | [`scripts/build_skill.py`](scripts/build_skill.py) | Builds the uploadable ZIP from the public source files. |
 
