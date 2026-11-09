@@ -1,18 +1,25 @@
 # Generator Application Review Harness
 
-Give applications just below a cutoff a second look. The harness finds cases to recheck, verifies that the review cites the original answers, and recalculates the score. It sends cases with missing or invalid evidence to a human reviewer.
+A first-pass score can miss a detail that would change who gets a closer look. This harness helps application teams review candidates near the cutoff before deciding whom to invite to the next stage.
 
-This is an independent demo inspired by [Generator Residency](https://generatorresidency.org/). The applications, scores, and rubric are fictional.
+You supply the **original application answers**, the **first-pass scores**, and a **rubric** that sets the cutoff and which scores to recheck. Claude or a human reviewer reads the relevant answers and proposes a score with a quote. The harness checks the quote against the application and calculates the new total. The team gets a report showing which applications cross the cutoff and which need a closer look because the evidence is missing or could not be verified.
 
-Already have an export? Go straight to [Run it on your applications](#run-it-on-your-applications).
+This is an independent demo with fictional applicants, scores, and criteria, inspired by the [Generator Residency](https://generatorresidency.org/).
+
+[Try the demo](#quick-start) · [Run it on your applications](#run-it-on-your-applications)
 
 ## See it work
 
-Mara Vale scored **68/100**, below the demo cutoff of **70**. The first pass credited her with helping start a pilot. Her other answer describes owning its delivery:
+Imagine your team uses a score of **70/100** to decide which applications to consider for a work test. You set the harness to recheck scores from **65 to just under 70**, so it takes a second look at **Mara Vale**, who scored **68/100**.
 
-> I recruited six reviewers, wrote the rubric, and ran two rounds of a pilot that processed 48 submissions.
+1. **The first review saw a supporting role.** Mara's summary said she helped a group start a pilot. She received **2/5 for execution**.
+2. **The second review found evidence of ownership.** In another answer, Mara described how she staffed and ran the pilot. That fits the rubric's **4/5** description for someone who led a project through delivery and reported a concrete outcome.
 
-The harness verifies the excerpt against her answer, calculates a proposed score of **84/100**, and flags her for **work-test review**. A human reviewer decides whether to advance her.
+   > I recruited six reviewers, wrote the rubric, and ran two rounds of a pilot that processed 48 submissions.
+
+3. **The harness checks the quote and does the math.** It finds the exact excerpt in Mara's answer. Execution is worth 40 points, so moving from 2/5 to 4/5 adds **16 points**. Her proposed total is **84/100**.
+
+The report flags Mara for **work-test review** and puts the original score, proposed score, and source quote together. A reviewer can check the reason for the change and decide whether to invite her.
 
 ## Quick start
 
