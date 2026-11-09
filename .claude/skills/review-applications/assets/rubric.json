@@ -1,0 +1,19 @@
+{
+  "version": "generator-demo-v1",
+  "cutoff": 70,
+  "audit_band": 5,
+  "weights": {
+    "execution": 40,
+    "gap_judgment": 25,
+    "initiative": 20,
+    "commitment": 15
+  },
+  "execution_anchors": {
+    "0": "No usable execution evidence.",
+    "1": "Expresses interest or shares an idea only.",
+    "2": "Contributed a scoped task or supported someone else's delivery.",
+    "3": "Owned a deliverable through completion with a concrete result.",
+    "4": "Owned a project end to end, coordinated delivery, and reports a concrete outcome.",
+    "5": "Repeated end-to-end delivery with concrete outcomes and evidence of iteration."
+  }
+}

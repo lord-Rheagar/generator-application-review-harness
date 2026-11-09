@@ -1,0 +1,72 @@
+[
+  {
+    "application_id": "B-101",
+    "execution_score": 4,
+    "field": "work_example",
+    "quote": "I set the schedule and trained four facilitators. I ran the full orientation pilot for 34 volunteers and handed the runbook to the next lead.",
+    "reason": "The applicant coordinated and delivered a complete pilot with a concrete outcome and handoff."
+  },
+  {
+    "application_id": "B-102",
+    "execution_score": 4,
+    "field": "work_example",
+    "quote": "I interviewed eight lab coordinators and built the guide with two volunteers. I ran the rollout and tracked 19 teams using the guide in their first month.",
+    "reason": "The applicant coordinated delivery and owned the rollout through measured adoption."
+  },
+  {
+    "application_id": "B-103",
+    "execution_score": 4,
+    "field": "work_example",
+    "quote": "I designed the intake queue and recruited three rotating reviewers. I ran the first four weeks and cleared a backlog of 72 requests.",
+    "reason": "The applicant designed, staffed, and operated the process through a measurable result."
+  },
+  {
+    "application_id": "B-104",
+    "execution_score": 3,
+    "field": "work_example",
+    "quote": "My deliverable was the published orientation guide. The program lead organized and ran the cohort.",
+    "reason": "The applicant owned the guide and the program lead owned overall delivery."
+  },
+  {
+    "application_id": "B-105",
+    "execution_score": 3,
+    "field": "work_example",
+    "quote": "I published the guide. The lead set up and ran the program.",
+    "reason": "The applicant owned the guide and the program lead owned overall delivery."
+  },
+  {
+    "application_id": "B-106",
+    "execution_score": 3,
+    "field": "work_example",
+    "quote": "I owned the index through publication. I hope to recruit contributors and track usage in the next cycle.",
+    "reason": "The index shipped. Coordination and adoption measurement are future plans."
+  },
+  {
+    "application_id": "B-107",
+    "execution_score": 3,
+    "field": "work_example",
+    "quote": "I owned and delivered the participant briefing pack. The organizers chose the program and ran the event.",
+    "reason": "The applicant owned a deliverable and the organizers ran the workshop."
+  },
+  {
+    "application_id": "B-108",
+    "execution_score": 3,
+    "field": "execution_summary",
+    "quote": "I owned and published a volunteer rota used by twelve people.",
+    "reason": "The delivered rota supports the score of 3. The program lead staffed and ran the workshops."
+  },
+  {
+    "application_id": "B-110",
+    "execution_score": 5,
+    "field": "work_example",
+    "quote": "I led three teams that published resource hubs used by 200 researchers.",
+    "reason": "Intentionally fabricated excerpt for a verifier check."
+  },
+  {
+    "application_id": "B-111",
+    "execution_score": 4,
+    "field": "execution_summary",
+    "quote": "I wrote and shipped a two-page participant guide.",
+    "reason": "Intentionally attributed to the wrong source field for a verifier check."
+  }
+]
